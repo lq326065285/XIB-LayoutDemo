@@ -74,11 +74,15 @@
         [cell setModel:self.dataArr[indexPath.row]];
     }];
     
-    //如果有两个label上下，直接用self(sel）
+    //如果有两个label上下，直接用self([self systemLayoutSizeFittingSize:UILayoutFittingCompressedSize]）
 //    TableViewCell3 * cell3 = [tableView dequeueReusableCellWithIdentifier:CELL_NAME3];
 //    return [cell3 getCellHeightWithModel:self.dataArr[indexPath.row]];
     
+//    TestModel * model = self.dataArr[indexPath.row];
+//    CGFloat height = [model.title boundingRectWithSize:CGSizeMake(200, 1000) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:@{NSFontAttributeName : [UIFont systemFontOfSize:15]} context:nil].size.height;
+//    return height + 10 + 10 + 10 + 21;
 }
+
 
 
 #pragma mark - get or set
